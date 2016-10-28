@@ -1,0 +1,17 @@
+{
+  "name": "flickr-gallery",
+  "version": "0.1.0",
+  "author": "Max Davidson <davidsonmax@gmail.com>",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom --coverage"
+  },
+  "dependencies": {
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
+  },
+  "devDependencies": {
+    "react-scripts": "0.7.0"
+  }
+}
