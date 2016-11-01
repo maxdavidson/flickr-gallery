@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Match, Miss, Link, Redirect } from 'react-router';
+import { HashRouter as Router, Match, Miss, Link, Redirect } from 'react-router';
 import { ResizableBox } from 'react-resizable';
 import FlickrGallery from './FlickrGallery';
 import 'react-resizable/css/styles.css';
