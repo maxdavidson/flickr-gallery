@@ -1,0 +1,10 @@
+@import "~react-resizable/css/styles.css";
+
+.flickr-gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #222;
+  color: #BBB;
+  transition: 250ms;
+}
