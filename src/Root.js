@@ -1,18 +1,34 @@
 import React from 'react';
 import { HashRouter as Router, Match, Miss, Link, Redirect } from 'react-router';
 import { ResizableBox } from 'react-resizable';
+import ReactGA from 'react-ga';
 import FlickrGallery from './FlickrGallery';
 import 'react-resizable/css/styles.css';
+
+// Enable
+if (process.env.NODE_ENV === 'production') {
+  const trackingID = process.env.REACT_APP_UA_TRACKING_ID;
+  if (typeof trackingID === 'string') {
+    ReactGA.initialize(trackingID);
+  }
+}
 
 export default function Root() {
   return (
     <Router>
-      <span>
-        <Match exactly pattern="/" component={Home} />
-        <Match pattern="/fullscreen" component={FullscreenDemo} />
-        <Match pattern="/widgets" component={WidgetsDemo} />
-        <Miss component={NoMatch} />
-      </span>
+      {({ action, location }) => {
+        if (action === 'PUSH') {
+          ReactGA.pageview(location.pathname);
+        }
+        return (
+          <span>
+            <Match exactly pattern="/" component={Home} />
+            <Match pattern="/fullscreen" component={FullscreenDemo} />
+            <Match pattern="/widgets" component={WidgetsDemo} />
+            <Miss component={NoMatch} />
+          </span>
+        );
+      }}
     </Router>
   );
 }
