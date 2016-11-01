@@ -8,8 +8,15 @@
     "test": "react-scripts test --env=jsdom --coverage"
   },
   "dependencies": {
+    "element-resize-detector": "^1.1.9",
+    "little-loader": "^0.1.1",
+    "lodash.debounce": "^4.0.8",
     "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "react-dom": "^15.3.2",
+    "react-photoswipe": "^1.2.0",
+    "react-resizable": "^1.4.5",
+    "react-router": "^4.0.0-alpha.5",
+    "react-spinner": "^0.2.6"
   },
   "devDependencies": {
     "react-scripts": "0.7.0"

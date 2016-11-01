@@ -1,0 +1,37 @@
+@import "~react-photoswipe/lib/photoswipe.css";
+
+.image-gallery {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.image-gallery .pswp-thumbnails {
+  line-height: 0;
+  /** Bug fix for iOS Safari */
+  height: calc(100% + 1px);
+}
+
+.image-gallery .pswp-thumbnails .pswp-thumbnail {
+  display: inline-block;
+  cursor: pointer;
+  transition: 100ms ease-out;
+  overflow: hidden;
+  /** Bug fix for iOS Safari */
+  transform: translate3d(0, 0, 0);
+}
+
+.image-gallery .pswp-thumbnails .pswp-thumbnail img {
+  z-index: 0;
+  background-color: #000;
+  transition: 250ms;
+  transform: scale3d(1, 1, 1);
+}
+
+.image-gallery .pswp-thumbnails .pswp-thumbnail img:hover {
+  z-index: 1;
+  transform: scale(1.15);
+  transform: scale3d(1.15, 1.15, 1);
+}

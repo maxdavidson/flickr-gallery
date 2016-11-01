@@ -1,0 +1,23 @@
+.query-box {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.query-box input:focus {
+  outline: none;
+}
+
+.query-box input[type="text"] {
+  box-sizing: border-box;
+  display: block;
+  margin: auto;
+  width: 420px;
+  max-width: 100%;
+  padding: 0.5em;
+  font-size: 26pt;
+  border-width: 0;
+  border-radius: 0;
+  opacity: 0.9;
+  box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.3);
+}

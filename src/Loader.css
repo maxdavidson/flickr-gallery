@@ -1,0 +1,9 @@
+@import "~react-spinner/react-spinner.css";
+
+.loader {
+  width: 100%;
+}
+
+.react-spinner {
+  transform: translateY(150px) scale(2);
+}
