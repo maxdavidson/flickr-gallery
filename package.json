@@ -2,6 +2,7 @@
   "name": "flickr-gallery",
   "version": "0.1.0",
   "author": "Max Davidson <davidsonmax@gmail.com>",
+  "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
