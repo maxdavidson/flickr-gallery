@@ -2,7 +2,15 @@
   "name": "flickr-gallery",
   "version": "0.1.0",
   "author": "Max Davidson <davidsonmax@gmail.com>",
+  "description": "React Flickr Gallery",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxdavidson/flickr-gallery.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxdavidson/flickr-gallery/issues"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
