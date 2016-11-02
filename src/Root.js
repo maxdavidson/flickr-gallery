@@ -5,7 +5,6 @@ import ReactGA from 'react-ga';
 import FlickrGallery from './FlickrGallery';
 import 'react-resizable/css/styles.css';
 
-// Enable
 if (process.env.NODE_ENV === 'production') {
   const trackingID = process.env.REACT_APP_UA_TRACKING_ID;
   if (typeof trackingID === 'string') {
@@ -22,7 +21,7 @@ export default function Root() {
         }
         return (
           <span>
-            <Match exactly pattern="/" component={Home} />
+            <Match pattern="/" exactly component={Home} />
             <Match pattern="/fullscreen" component={FullscreenDemo} />
             <Match pattern="/widgets" component={WidgetsDemo} />
             <Miss component={NoMatch} />
@@ -36,9 +35,9 @@ export default function Root() {
 function Home() {
   return (
     <span>
-      <h2>React Gallery demos</h2>
+      <h2>flickr-gallery demos</h2>
       <ul>
-        <li><Link to="/fullscreen">Full screen</Link></li>
+        <li><Link to="/fullscreen">Fullscreen</Link></li>
         <li><Link to="/widgets">Resizable widgets</Link></li>
       </ul>
     </span>

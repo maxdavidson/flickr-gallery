@@ -2,7 +2,7 @@
   "name": "flickr-gallery",
   "version": "0.1.0",
   "author": "Max Davidson <davidsonmax@gmail.com>",
-  "description": "React Flickr Gallery",
+  "description": "React Flickr gallery",
   "license": "MIT",
   "homepage": "https://maxdavidson.github.io/flickr-gallery",
   "repository": {
