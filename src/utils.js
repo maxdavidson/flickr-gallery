@@ -61,13 +61,22 @@ export function createUniqueCallbackName() {
 }
 
 export async function jsonp(url, callbackName = createUniqueCallbackName()) {
+  let scriptElement;
   try {
     return await new Promise((resolve, reject) => {
       window[callbackName] = resolve;
-      load(url, reject);
+      load(url, {
+        callback: reject,
+        setup(script) {
+          scriptElement = script;
+        }
+      });
     });
   } finally {
     delete window[callbackName];
+    if (scriptElement) {
+      scriptElement.remove();
+    }
   }
 }
 
