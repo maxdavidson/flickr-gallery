@@ -27,7 +27,7 @@
     "react-dom": "^15.3.2",
     "react-ga": "^2.1.2",
     "react-photoswipe": "^1.2.0",
-    "react-resizable": "^1.4.5",
+    "react-resizable": "^1.4.6",
     "react-router": "^4.0.0-alpha.5",
     "react-spinner": "^0.2.6"
   },
