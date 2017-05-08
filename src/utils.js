@@ -26,10 +26,11 @@ export function getBestSize(candidateSizes, limitingSize) {
 }
 
 function resizeToHeight(item, desiredHeight) {
-  return Object.assign({}, item, {
+  return {
+    ...item,
     width: desiredHeight * item.width / item.height,
     height: desiredHeight
-  });
+  }
 }
 
 export function computeLayout(items, rowWidth, minRowHeight) {

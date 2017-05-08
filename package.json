@@ -20,19 +20,22 @@
     "predeploy": "npm run build"
   },
   "dependencies": {
-    "element-resize-detector": "^1.1.9",
+    "element-resize-detector": "^1.1.12",
+    "history": "^4.6.1",
     "little-loader": "^0.2.0",
     "lodash.debounce": "^4.0.8",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "react-ga": "^2.1.2",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-ga": "^2.2.0",
     "react-photoswipe": "^1.2.0",
-    "react-resizable": "^1.4.5",
-    "react-router": "^4.0.0-alpha.5",
-    "react-spinner": "^0.2.6"
+    "react-resizable": "^1.7.0",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "react-spinner": "^0.2.7"
   },
   "devDependencies": {
-    "gh-pages": "^0.11.0",
-    "react-scripts": "0.8.2"
+    "gh-pages": "^0.12.0",
+    "react-scripts": "^0.9.5"
   }
 }

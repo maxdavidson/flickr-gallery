@@ -1,7 +1,6 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import { string, func } from 'prop-types';
 import './QueryBox.css';
-
-const { string, func } = PropTypes;
 
 export default function QueryBox({ query, placeholder, onChange }) {
   return (

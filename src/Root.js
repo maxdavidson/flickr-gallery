@@ -1,33 +1,34 @@
 import React from 'react';
-import { HashRouter as Router, Match, Miss, Link, Redirect } from 'react-router';
+import { createHashHistory } from 'history';
+import { Router, Switch, Route, Link, Redirect } from 'react-router-dom';
 import { ResizableBox } from 'react-resizable';
 import ReactGA from 'react-ga';
 import FlickrGallery from './FlickrGallery';
 import 'react-resizable/css/styles.css';
 
+const history = createHashHistory();
+
 if (process.env.NODE_ENV === 'production') {
   const trackingID = process.env.REACT_APP_UA_TRACKING_ID;
   if (typeof trackingID === 'string') {
     ReactGA.initialize(trackingID);
+    history.listen((location, action) => {
+      if (action === 'PUSH') {
+        ReactGA.pageview(location.pathname);
+      }
+    });
   }
 }
 
 export default function Root() {
   return (
-    <Router>
-      {({ action, location }) => {
-        if (action === 'PUSH') {
-          ReactGA.pageview(location.pathname);
-        }
-        return (
-          <span>
-            <Match pattern="/" exactly component={Home} />
-            <Match pattern="/fullscreen" component={FullscreenDemo} />
-            <Match pattern="/widgets" component={WidgetsDemo} />
-            <Miss component={NoMatch} />
-          </span>
-        );
-      }}
+    <Router history={history}>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/fullscreen" component={FullscreenDemo} />
+        <Route path="/widgets" component={WidgetsDemo} />
+        <Route component={NoMatch} />
+      </Switch>
     </Router>
   );
 }

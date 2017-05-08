@@ -1,12 +1,11 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
+import { string, number, bool, func, shape, arrayOf } from 'prop-types';
 import createResizeDetector from 'element-resize-detector';
 import debounce from 'lodash.debounce';
 import { PhotoSwipeGallery } from 'react-photoswipe';
 import Loader from './Loader';
 import { computeLayout, getBestSize } from './utils';
 import './ImageGallery.css';
-
-const { string, number, bool, func, shape, arrayOf } = PropTypes;
 
 const FlickPhoto = shape({
   id: string.isRequired,
